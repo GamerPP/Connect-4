@@ -62,6 +62,7 @@ int main(int, char**) {
             }
             else if (y2+1 == height) grid[choice][y2] = currPlayer + 1;
         }
+        
         currPlayer = !currPlayer;
     }
 }
