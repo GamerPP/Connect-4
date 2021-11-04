@@ -18,7 +18,7 @@ int main(int, char**) {
     chooseSymbols();
     
     while (true){
-        cout << "\033[2J\033[1;1H";
+        system("cls");
         for (int y = 0; y < height+1; y++){
             if (!y){
                 cout << "  ";
@@ -50,7 +50,7 @@ int main(int, char**) {
             cout << "Player " << currPlayer + 1 << ", where would you like to place your token?: ";
             cin >> choice;
             choice -= 1;
-            if (choice > width || choice < 0 || grid[choice][0])
+            if (choice > width || choice < 0 /*|| grid[choice][0]*/)
                 cout << "Invalid choice!\n";
             else valid = true;
         }
